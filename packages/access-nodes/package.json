@@ -1,6 +1,6 @@
 {
   "name": "@dilanx/access-nodes",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A library for dealing with access node strings",
   "main": "index.js",
   "type": "module",
