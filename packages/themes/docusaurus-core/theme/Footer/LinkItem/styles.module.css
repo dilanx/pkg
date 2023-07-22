@@ -1,0 +1,7 @@
+.footerLink {
+  color: var(--ifm-footer-link-color);
+}
+
+.footerLink:hover {
+  color: var(--ifm-footer-link-color);
+}

@@ -1,0 +1,8 @@
+.logo {
+  transition: opacity 150ms ease-in-out;
+}
+
+.logo:hover {
+  opacity: 0.6;
+  color: inherit;
+}

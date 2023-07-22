@@ -1,0 +1,18 @@
+.paginationSublabel {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.paginationSublabel.left {
+  justify-content: left;
+}
+
+.paginationSublabel.right {
+  justify-content: right;
+}
+
+.paginationSublabel :global(.d-arrow) {
+  width: 1rem;
+  height: 1rem;
+}

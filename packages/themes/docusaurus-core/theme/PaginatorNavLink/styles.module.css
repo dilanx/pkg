@@ -1,0 +1,12 @@
+.pagination {
+  border-width: 2px;
+}
+
+.pagination:hover {
+  border-color: #000000;
+}
+
+.paginationLabel {
+  color: var(--ifm-color-black);
+  font-weight: 500;
+}

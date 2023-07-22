@@ -1,0 +1,15 @@
+{
+  "name": "dilanx-pkg-root",
+  "version": "0.0.0",
+  "author": "Dilan Nair (dilanxd.com)",
+  "prettier": "@dilanx/config/prettier",
+  "type": "module",
+  "scripts": {
+    "test": "NODE_OPTIONS=--experimental-vm-modules jest"
+  },
+  "devDependencies": {
+    "@dilanx/config": "^1.1.2",
+    "jest": "^29.6.1",
+    "prettier": "^3.0.0"
+  }
+}

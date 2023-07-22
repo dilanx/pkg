@@ -1,0 +1,30 @@
+.headerTitle a {
+  color: var(--ifm-color-black);
+}
+
+.headerTitle a :global(.d-arrow) {
+  vertical-align: middle;
+  width: 2rem;
+  height: 2rem;
+  transition: transform 0.25s ease-in-out;
+}
+
+.headerTitle a:hover {
+  text-decoration: none;
+  color: var(--ifm-color-primary);
+}
+
+.headerTitle a:hover :global(.d-arrow) {
+  transform: translateX(0.5rem);
+}
+
+.headerAuthors a {
+  color: var(--ifm-color-black);
+}
+
+@media (max-width: 576px) {
+  .headerTitle a :global(.d-arrow) {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+}

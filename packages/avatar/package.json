@@ -1,0 +1,28 @@
+{
+  "name": "@dilanx/avatar",
+  "version": "1.0.9",
+  "description": "Avatar components for auth.dilanxd.com accounts",
+  "main": "index.js",
+  "files": [
+    "index.js",
+    "components"
+  ],
+  "type": "module",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dilanx/pkg.git"
+  },
+  "author": "Dilan Nair",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dilanx/pkg/issues"
+  },
+  "homepage": "https://github.com/dilanx/pkg/tree/main/packages/avatar#readme",
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "react": "^18.2.0"
+  }
+}

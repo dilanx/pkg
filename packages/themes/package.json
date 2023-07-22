@@ -1,0 +1,25 @@
+{
+  "name": "@dilanx/themes",
+  "version": "2.0.1",
+  "description": "A collection of themes for Dilan's websites",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dilanx/pkg.git"
+  },
+  "author": "Dilan Nair (dilanxd.com)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dilanx/pkg/issues"
+  },
+  "homepage": "https://github.com/dilanx/pkg/tree/main/packages/themes#readme",
+  "dependencies": {
+    "@docusaurus/core": "^2.4.0",
+    "clsx": "^1.2.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

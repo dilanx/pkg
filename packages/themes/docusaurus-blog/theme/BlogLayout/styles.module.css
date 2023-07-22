@@ -1,0 +1,10 @@
+.aside {
+  max-height: calc(100vh - (var(--ifm-navbar-height) + 2rem));
+  overflow-y: auto;
+  position: sticky;
+  top: calc(var(--ifm-navbar-height) + 2rem);
+}
+
+.toc {
+  margin-bottom: 12px;
+}
