@@ -27,3 +27,13 @@ test('wildcards', () => {
   userAccessNodes.push('test2.a');
   expect(isNodeAuthorized(userAccessNodes, 'test2.a')).toBe(true);
 });
+
+test('no nodes', () => {
+  const userAccessNodes = [];
+
+  expect(isNodeAuthorized(userAccessNodes, 'test.a')).toBe(false);
+  expect(isNodeAuthorized(userAccessNodes, 'test.a.b')).toBe(false);
+  expect(isNodeAuthorized(userAccessNodes, 'test.a.b.c')).toBe(false);
+  expect(isNodeAuthorized(userAccessNodes, 'test.a.b.c.d')).toBe(false);
+  expect(isNodeAuthorized(userAccessNodes, 'test.a.b.d')).toBe(false);
+});
