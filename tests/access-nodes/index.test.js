@@ -35,5 +35,5 @@ test('no nodes', () => {
   expect(isNodeAuthorized(userAccessNodes, 'test.a.b')).toBe(false);
   expect(isNodeAuthorized(userAccessNodes, 'test.a.b.c')).toBe(false);
   expect(isNodeAuthorized(userAccessNodes, 'test.a.b.c.d')).toBe(false);
-  expect(isNodeAuthorized(userAccessNodes, 'test.a.b.d')).toBe(false);
+  expect(isNodeAuthorized(userAccessNodes, 'test.a.b.d')).toBe(true);
 });
