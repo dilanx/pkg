@@ -1,0 +1,76 @@
+.container {
+  width: 100%;
+  display: flex;
+  padding: 4px 8px;
+  gap: 8px;
+  align-items: center;
+}
+
+.method {
+  margin: 0;
+  font-weight: 700;
+}
+
+.endpoint {
+  margin: 0;
+  font-weight: 700;
+  font-family: monospace;
+  font-size: 16px;
+  color: #242424;
+  background-color: #f0f0f0;
+  border-radius: 4px;
+  padding: 0 8px;
+  display: flex;
+  align-items: flex-start;
+  flex: 1;
+}
+
+.endpointContent {
+  flex: 1;
+}
+
+.endpointText {
+  margin: 0;
+}
+
+.showMore {
+  background: none;
+  border: none;
+  padding: 2px;
+  margin-top: 3px;
+  display: flex;
+  cursor: pointer;
+  border-radius: 4px;
+  color: #646464;
+}
+
+.showMore:hover {
+  background-color: #e0e0e0;
+}
+
+.showMore:active {
+  background-color: #d0d0d0;
+}
+
+.servers {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 12px;
+  font-weight: 400;
+  padding-left: 16px;
+}
+
+.servers p {
+  margin: 0;
+}
+
+.servers p span {
+  font-weight: 700;
+}
+
+.icon {
+  width: 16px;
+  height: 16px;
+  stroke-width: 2px;
+}

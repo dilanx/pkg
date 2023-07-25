@@ -1,0 +1,53 @@
+.container {
+  width: 100%;
+  padding: 8px;
+  padding-left: 24px;
+}
+
+.heading {
+  margin: 0;
+  font-size: 12px;
+  color: #646464;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.headingType {
+  margin: 0;
+  font-weight: 700;
+}
+
+.headingContentType {
+  margin: 0;
+  font-family: monospace;
+}
+
+.param {
+  font-size: 14px;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.paramId {
+  margin: 0;
+  font-weight: 700;
+  color: #000000;
+}
+
+.paramDesc {
+  margin: 0;
+  color: #646464;
+  font-size: 12px;
+}
+
+.required {
+  color: #ef4444;
+}
+
+.paramType {
+  margin: 0;
+  font-family: monospace;
+  font-size: 12px;
+}
