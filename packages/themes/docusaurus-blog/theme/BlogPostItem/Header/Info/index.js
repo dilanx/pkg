@@ -46,8 +46,19 @@ function Spacer() {
 }
 export default function BlogPostItemHeaderInfo({ className }) {
   const { metadata } = useBlogPost();
-  const { date, formattedDate, readingTime, tags } = metadata;
+  const { date, formattedDate, readingTime, tags, frontMatter } = metadata;
   const category = tags?.[0];
+
+  const updated = frontMatter.updated;
+  let formattedUpdated = undefined;
+  if (updated) {
+    formattedUpdated = Intl.DateTimeFormat('en-US', {
+      day: 'numeric',
+      month: 'long',
+      year: 'numeric',
+      timeZone: 'UTC',
+    }).format(updated);
+  }
   return (
     <div className={clsx(styles.container, 'margin-vert--md', className)}>
       {category ? (
@@ -62,6 +73,11 @@ export default function BlogPostItemHeaderInfo({ className }) {
       )}
       <Spacer />
       <Date date={date} formattedDate={formattedDate} />
+      {typeof formattedUpdated !== 'undefined' && (
+        <>
+          (updated <Date date={updated} formattedDate={formattedUpdated} />)
+        </>
+      )}
       {typeof readingTime !== 'undefined' && (
         <>
           <Spacer />
