@@ -85,6 +85,7 @@ export default function BlogPostItemHeaderInfo({ className }) {
       <DateElement date={date} formattedDate={formattedDate} />
       {updated && (
         <>
+          {' '}
           (updated{' '}
           <DateElement date={updated} formattedDate={formattedUpdated} />)
         </>
