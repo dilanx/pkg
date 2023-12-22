@@ -24,17 +24,27 @@ function useReadingTimePlural() {
     );
   };
 }
+
 function capitalize(text) {
   const words = text.split(' ');
   return words
     .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
     .join(' ');
 }
+
+function getDate(updated) {
+  if (!updated) return;
+  if (typeof updated === 'string') {
+    return new Date(updated);
+  }
+  return updated;
+}
+
 function ReadingTime({ readingTime }) {
   const readingTimePlural = useReadingTimePlural();
   return <>{readingTimePlural(readingTime)}</>;
 }
-function Date({ date, formattedDate }) {
+function DateElement({ date, formattedDate }) {
   return (
     <time dateTime={date} itemProp="datePublished">
       {formattedDate}
@@ -49,10 +59,10 @@ export default function BlogPostItemHeaderInfo({ className }) {
   const { date, formattedDate, readingTime, tags, frontMatter } = metadata;
   const category = tags?.[0];
 
-  const updated = frontMatter.updated ? new Date(frontMatter.updated) : null;
+  const updated = getDate(frontMatter.updated);
   let formattedUpdated = undefined;
   if (updated) {
-    formattedUpdated = Intl.DateTimeFormat('en-US', {
+    formattedUpdated = new Intl.DateTimeFormat('en-US', {
       day: 'numeric',
       month: 'long',
       year: 'numeric',
@@ -72,10 +82,11 @@ export default function BlogPostItemHeaderInfo({ className }) {
         <p className="blog-item-category cat-none">Uncategorized</p>
       )}
       <Spacer />
-      <Date date={date} formattedDate={formattedDate} />
+      <DateElement date={date} formattedDate={formattedDate} />
       {updated && (
         <>
-          (updated <Date date={updated} formattedDate={formattedUpdated} />)
+          (updated{' '}
+          <DateElement date={updated} formattedDate={formattedUpdated} />)
         </>
       )}
       {typeof readingTime !== 'undefined' && (

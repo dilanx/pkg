@@ -3,6 +3,7 @@
 
 const lightCodeTheme = require('prism-react-renderer/themes/github');
 const darkCodeTheme = require('prism-react-renderer/themes/dracula');
+const path = require('path');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -76,7 +77,7 @@ const config = {
             position: 'left',
             label: 'Tutorial',
           },
-          {to: '/blog', label: 'Blog', position: 'left'},
+          { to: '/blog', label: 'Blog', position: 'left' },
           {
             href: 'https://github.com/facebook/docusaurus',
             label: 'GitHub',
@@ -134,6 +135,9 @@ const config = {
         darkTheme: darkCodeTheme,
       },
     }),
+  themes: [path.resolve(__dirname, '../../../packages/themes/docusaurus-blog')],
 };
+
+console.log(__dirname);
 
 module.exports = config;
