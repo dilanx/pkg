@@ -57,7 +57,7 @@ export default function BlogPostItemHeaderInfo({ className }) {
       month: 'long',
       year: 'numeric',
       timeZone: 'UTC',
-    }).format(updated);
+    }).format(new Date(updated));
   }
   return (
     <div className={clsx(styles.container, 'margin-vert--md', className)}>
