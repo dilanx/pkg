@@ -1,5 +1,5 @@
 import React from 'react';
-import { ChevronRightIcon } from '@heroicons/react/outline';
+import { ChevronRightIcon } from '@heroicons/react/24/outline';
 import clsx from 'clsx';
 import Link from '@docusaurus/Link';
 import { useBlogPost } from '@docusaurus/theme-common/internal';

@@ -1,6 +1,6 @@
 {
   "name": "@dilanx/themes",
-  "version": "3.2.1",
+  "version": "3.2.2",
   "description": "A collection of themes for Dilan's websites",
   "scripts": {},
   "repository": {
@@ -15,6 +15,7 @@
   "homepage": "https://github.com/dilanx/pkg/tree/main/packages/themes#readme",
   "dependencies": {
     "@docusaurus/core": "^2.4.0",
+    "@heroicons/react": "^2.1.1",
     "clsx": "^1.2.1",
     "prism-react-renderer": "^2.3.1",
     "react": "^17.0.2",

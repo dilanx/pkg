@@ -1,5 +1,5 @@
 import { translate } from '@docusaurus/Translate';
-import { ArrowLeftIcon, ArrowRightIcon } from '@heroicons/react/outline';
+import { ArrowLeftIcon, ArrowRightIcon } from '@heroicons/react/24/outline';
 import PaginatorNavLink from '@theme/PaginatorNavLink';
 import clsx from 'clsx';
 import React from 'react';
