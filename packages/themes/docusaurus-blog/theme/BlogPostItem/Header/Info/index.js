@@ -49,7 +49,7 @@ export default function BlogPostItemHeaderInfo({ className }) {
   const { date, formattedDate, readingTime, tags, frontMatter } = metadata;
   const category = tags?.[0];
 
-  const updated = frontMatter.updated;
+  const updated = frontMatter.updated ? new Date(frontMatter.updated) : null;
   let formattedUpdated = undefined;
   if (updated) {
     formattedUpdated = Intl.DateTimeFormat('en-US', {
@@ -57,7 +57,7 @@ export default function BlogPostItemHeaderInfo({ className }) {
       month: 'long',
       year: 'numeric',
       timeZone: 'UTC',
-    }).format(new Date(updated));
+    }).format(updated);
   }
   return (
     <div className={clsx(styles.container, 'margin-vert--md', className)}>
@@ -73,7 +73,7 @@ export default function BlogPostItemHeaderInfo({ className }) {
       )}
       <Spacer />
       <Date date={date} formattedDate={formattedDate} />
-      {typeof formattedUpdated !== 'undefined' && (
+      {updated && (
         <>
           (updated <Date date={updated} formattedDate={formattedUpdated} />)
         </>
