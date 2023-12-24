@@ -1,0 +1,14 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+COMMIT_MSG=$(head -n1 "$1")
+COMMIT_PREFIXES="access-nodes avatar config themes"
+
+for item in $COMMIT_PREFIXES; do
+  if echo $COMMIT_MSG | grep -qE "^$item: .+$"; then
+    exit 0;
+  fi
+done
+
+echo "@dilanx/config is aborting commit! Follow format \"<prefix>: <message>\" where prefix is one of $COMMIT_PREFIXES."
+exit 1
