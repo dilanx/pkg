@@ -1,6 +1,6 @@
 {
   "name": "@dilanx/themes",
-  "version": "3.4.5",
+  "version": "3.4.6",
   "description": "A collection of themes for Dilan's websites",
   "scripts": {
     "build": "babel --copy-files --out-dir . src",
