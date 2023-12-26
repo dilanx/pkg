@@ -14,7 +14,7 @@
     "write-heading-ids": "docusaurus write-heading-ids"
   },
   "dependencies": {
-    "@dilanx/themes": "^3.4.2",
+    "@dilanx/themes": "^3.4.3",
     "@docusaurus/core": "2.4.1",
     "@docusaurus/preset-classic": "2.4.1",
     "@heroicons/react": "^2.1.1",

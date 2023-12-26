@@ -1,13 +1,16 @@
 {
   "name": "@dilanx/themes",
-  "version": "3.4.2",
+  "version": "3.4.4",
   "description": "A collection of themes for Dilan's websites",
   "scripts": {
-    "build": "babel --out-dir . src",
+    "build": "babel --copy-files --out-dir . src",
     "prepublish": "npm run build"
   },
   "files": [
-    "dist/",
+    "components",
+    "docusaurus-blog",
+    "docusaurus-content",
+    "docusaurus-core",
     "README.md"
   ],
   "repository": {
