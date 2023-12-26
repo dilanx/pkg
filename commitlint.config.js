@@ -4,7 +4,7 @@ export default {
     'type-enum': [
       2,
       'always',
-      ['access-nodes', 'avatar', 'base', 'config', 'themes'],
+      ['access-nodes', 'avatar', 'base', 'config', 'tests', 'themes'],
     ],
   },
 };
