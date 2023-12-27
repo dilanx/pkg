@@ -1,18 +1,8 @@
 {
   "name": "@dilanx/themes",
-  "version": "3.4.6",
+  "version": "3.5.2",
   "description": "A collection of themes for Dilan's websites",
-  "scripts": {
-    "build": "babel --copy-files --out-dir . src",
-    "prepublish": "npm run build"
-  },
-  "files": [
-    "components",
-    "docusaurus-blog",
-    "docusaurus-content",
-    "docusaurus-core",
-    "README.md"
-  ],
+  "scripts": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/dilanx/pkg.git"
@@ -39,5 +29,12 @@
     "@babel/cli": "^7.23.4",
     "@babel/core": "^7.23.6",
     "@babel/plugin-transform-react-jsx": "^7.23.4"
-  }
+  },
+  "files": [
+    "README.md",
+    "components",
+    "docusaurus-blog",
+    "docusaurus-content",
+    "docusaurus-core"
+  ]
 }

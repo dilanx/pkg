@@ -7,7 +7,7 @@
   "scripts": {
     "test": "NODE_OPTIONS=--experimental-vm-modules jest",
     "prepare": "husky install",
-    "commit-lint": "node packages/config/bin.js commit-lint"
+    "test:docusaurus": "cd tests/themes/docusaurus && npm start -- --port 3002"
   },
   "devDependencies": {
     "@commitlint/cli": "^18.4.3",

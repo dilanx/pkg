@@ -5,9 +5,9 @@ authors: [slorber]
 tags: [docusaurus]
 ---
 
-import { IconText } from '@dilanx/themes/components';
 import { PlusIcon } from '@heroicons/react/24/outline';
-// import { IconText } from '../../../../packages/themes/components';
+import { IconText } from '../../../../packages/themes/src/components';
+import { StandaloneLinks } from '../../../../packages/themes/src/components';
 
 Press <IconText Icon={PlusIcon}>test</IconText> to continue. Hello world Hello world Hello world Hello world Hello world Hello world Hello world Hello world Hello world Hello world Hello world Hello world Hello world Hello world Hello world Hello world Hello world Hello world.
 
@@ -24,3 +24,10 @@ Use the power of React to create interactive blog posts.
 <button onClick={() => alert('button clicked!')}>Click me!</button>
 
 :::
+
+<StandaloneLinks
+  links={[
+    { label: 'Link 1 lalalalalala', href: 'https://www.dilanxd.com' },
+    { label: 'Link 2', href: 'https://www.dilanxd.com', newTab: true },
+  ]}
+/>
