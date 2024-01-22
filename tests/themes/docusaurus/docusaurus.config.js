@@ -135,7 +135,9 @@ const config = {
         darkTheme: darkCodeTheme,
       },
     }),
-  themes: [path.resolve(__dirname, '../../../packages/themes/docusaurus-blog')],
+  themes: [
+    path.resolve(__dirname, '../../../packages/themes/src/docusaurus-blog'),
+  ],
 };
 
 console.log(__dirname);
