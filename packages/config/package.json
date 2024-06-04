@@ -1,12 +1,13 @@
 {
   "name": "@dilanx/config",
-  "version": "2.0.1",
+  "version": "3.0.0",
   "description": "Default configuration for Dilan's projects",
   "main": "index.js",
   "files": [
     "bin.js",
     "utility.js",
     "prettier",
+    "prettier-tailwindcss",
     "commitlint"
   ],
   "bin": "./bin.js",
@@ -29,6 +30,7 @@
     "access": "public"
   },
   "dependencies": {
+    "prettier-plugin-tailwindcss": "^0.6.1",
     "yargs": "^17.7.2"
   }
 }
