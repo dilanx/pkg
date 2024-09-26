@@ -136,6 +136,7 @@ const config = {
       },
     }),
   themes: [
+    path.resolve(__dirname, '../../../packages/themes/src/docusaurus-core'),
     path.resolve(__dirname, '../../../packages/themes/src/docusaurus-blog'),
   ],
 };

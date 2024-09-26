@@ -2,7 +2,10 @@ import React from 'react';
 import clsx from 'clsx';
 import { translate } from '@docusaurus/Translate';
 import { usePluralForm } from '@docusaurus/theme-common';
-import { useBlogPost } from '@docusaurus/theme-common/internal';
+import {
+  useBlogPost,
+  useDateTimeFormat,
+} from '@docusaurus/theme-common/internal';
 import styles from './styles.module.css';
 import Link from '@docusaurus/Link';
 // Very simple pluralization: probably good enough for now
@@ -45,30 +48,25 @@ function ReadingTime({ readingTime }) {
   return <>{readingTimePlural(readingTime)}</>;
 }
 function DateElement({ date, formattedDate }) {
-  return (
-    <time dateTime={date} itemProp="datePublished">
-      {formattedDate}
-    </time>
-  );
+  return <time dateTime={date}>{formattedDate}</time>;
 }
 function Spacer() {
   return <>{' · '}</>;
 }
 export default function BlogPostItemHeaderInfo({ className }) {
   const { metadata } = useBlogPost();
-  const { date, formattedDate, readingTime, tags, frontMatter } = metadata;
+  const { date, readingTime, tags, frontMatter } = metadata;
   const category = tags?.[0];
+  const dateTimeFormat = useDateTimeFormat({
+    day: 'numeric',
+    month: 'long',
+    year: 'numeric',
+    timeZone: 'UTC',
+  });
 
+  const formatDate = (blogDate) => dateTimeFormat.format(new Date(blogDate));
   const updated = getDate(frontMatter.updated);
-  let formattedUpdated = undefined;
-  if (updated) {
-    formattedUpdated = new Intl.DateTimeFormat('en-US', {
-      day: 'numeric',
-      month: 'long',
-      year: 'numeric',
-      timeZone: 'UTC',
-    }).format(updated);
-  }
+
   return (
     <div className={clsx(styles.container, 'margin-vert--md', className)}>
       {category ? (
@@ -82,12 +80,12 @@ export default function BlogPostItemHeaderInfo({ className }) {
         <p className="blog-item-category cat-none">Uncategorized</p>
       )}
       <Spacer />
-      <DateElement date={date} formattedDate={formattedDate} />
+      <DateElement date={date} formattedDate={formatDate(date)} />
       {updated && (
         <>
           {' '}
           (updated{' '}
-          <DateElement date={updated} formattedDate={formattedUpdated} />)
+          <DateElement date={updated} formattedDate={formatDate(updated)} />)
         </>
       )}
       {typeof readingTime !== 'undefined' && (

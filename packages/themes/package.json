@@ -1,6 +1,6 @@
 {
   "name": "@dilanx/themes",
-  "version": "3.5.3",
+  "version": "4.0.0",
   "description": "A collection of themes for Dilan's websites",
   "scripts": {},
   "repository": {
@@ -14,21 +14,21 @@
   },
   "homepage": "https://github.com/dilanx/pkg/tree/main/packages/themes#readme",
   "dependencies": {
-    "@docusaurus/core": "^2.4.0",
-    "@heroicons/react": "^2.1.1",
-    "clsx": "^1.2.1",
+    "@docusaurus/core": "^3.5.2",
+    "@heroicons/react": "^2.1.5",
+    "clsx": "^2.1.1",
     "color": "^4.2.3",
-    "prism-react-renderer": "^2.3.1",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "prism-react-renderer": "^2.4.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
   },
   "publishConfig": {
     "access": "public"
   },
   "devDependencies": {
-    "@babel/cli": "^7.23.4",
-    "@babel/core": "^7.23.6",
-    "@babel/plugin-transform-react-jsx": "^7.23.4"
+    "@babel/cli": "^7.25.6",
+    "@babel/core": "^7.25.2",
+    "@babel/plugin-transform-react-jsx": "^7.25.2"
   },
   "files": [
     "README.md",
